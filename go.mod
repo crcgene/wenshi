@@ -1,4 +1,4 @@
-module wenshi
+module win-n8n
 
 go 1.23
 
@@ -34,4 +34,4 @@ require (
 	golang.org/x/text v0.22.0 // indirect
 )
 
-// replace github.com/wailsapp/wails/v2 v2.10.2 => C:\Users\Admin\go\pkg\mod
+// replace github.com/wailsapp/wails/v2 v2.10.1 => /home/alex/go/pkg/mod

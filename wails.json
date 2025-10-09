@@ -1,13 +1,17 @@
 {
   "$schema": "https://wails.io/schemas/config.v2.json",
-  "name": "wenshi",
-  "outputfilename": "wenshi",
+  "name": "wails-template",
+  "outputfilename": "wails-template",
   "frontend:install": "npm install",
   "frontend:build": "npm run build",
   "frontend:dev:watcher": "npm run dev",
   "frontend:dev:serverUrl": "auto",
   "author": {
     "name": "Gene Croco",
-    "email": "crocogene@gmail.com"
-  }
+    "email": "crocogene@gmail.com",
+    "url": "https://github.com/crcgene"
+  },
+  "exclude": [
+    ".vscode"
+  ]
 }
