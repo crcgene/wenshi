@@ -9,11 +9,12 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',  // Слушать на всех интерфейсах IPv4
     port: 5173,
-    strictPort: true,
-  }, 
+    strictPort: false, //брать следующий порт, если 5173 занят
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "wailsjs": path.resolve(__dirname, "./wailsjs"),
     },
   },
 })

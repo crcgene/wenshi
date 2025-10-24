@@ -5,3 +5,31 @@
 export function Greet(arg1) {
   return window['go']['main']['App']['Greet'](arg1);
 }
+
+export function OpenFileDialog() {
+  return window['go']['main']['App']['OpenFileDialog']();
+}
+
+export function ParseWenFile(arg1) {
+  return window['go']['main']['App']['ParseWenFile'](arg1);
+}
+
+export function ReadFile(arg1) {
+  return window['go']['main']['App']['ReadFile'](arg1);
+}
+
+export function SaveFileDialog(arg1) {
+  return window['go']['main']['App']['SaveFileDialog'](arg1);
+}
+
+export function SerializeWenFile(arg1, arg2, arg3) {
+  return window['go']['main']['App']['SerializeWenFile'](arg1, arg2, arg3);
+}
+
+export function ValidateTxtFile(arg1) {
+  return window['go']['main']['App']['ValidateTxtFile'](arg1);
+}
+
+export function WriteFile(arg1, arg2) {
+  return window['go']['main']['App']['WriteFile'](arg1, arg2);
+}

@@ -1,0 +1,80 @@
+/* @/components/Annotator/styles.css */
+
+/* Annotation mark styling */
+.annotation-mark {
+  position: relative;
+  display: inline;
+  white-space: nowrap; /*помеченный блок переносить на новую строку только целиком*/
+}
+
+/* Create the line with end marks above text */
+.annotation-mark::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -1px;
+  right: -1px;
+  height: 6px;
+  border-top: 1px solid var(--annotation-color, #999);
+  border-left: 2px solid var(--annotation-color, #999);
+  border-right: 2px solid var(--annotation-color, #999);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Label display above the line */
+.annotation-mark[data-label]::after {
+  content: attr(data-label);
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--annotation-color, #999);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Colors are now set via inline style attribute with --annotation-color CSS variable */
+/* No need for color-specific selectors anymore */
+
+.tiptap p {
+  position: relative;
+  padding: 10px 5px 0 5px;
+  line-height: 2.5;
+  font-size: 30px;
+  white-space: normal;
+  margin: 0;
+}
+
+.tiptap ::selection {
+  background-color: rgba(59, 130, 246, 0.2); /* Более прозрачный selection */
+}
+
+.tiptap ::-moz-selection {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+/* для того, чтобы не менялясь высота параграфа при отображении переносов строк*/
+.ProseMirror-separator {
+  display: none;
+}
+
+/* BubbleMenu should be above annotation marks */
+/*.tiptap-bubble-menu {
+  z-index: 1000 !important;
+}*/
+
+/* Placeholder styling */
+.tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #adb5bd;
+  pointer-events: none;
+  height: 0;
+}

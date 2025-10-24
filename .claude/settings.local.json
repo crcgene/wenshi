@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(powershell:*)",
+      "Bash(move SpacerMark.tsx SpacerNode.tsx)",
+      "Bash(cmd.exe /c \"move SpacerMark.tsx SpacerNode.tsx\")",
+      "Bash(rm:*)",
+      "Bash(wails dev)",
+      "Bash(npm run build:*)",
+      "Bash(taskkill:*)",
+      "Bash(node kill-vite-port.js:*)",
+      "Bash(node:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
